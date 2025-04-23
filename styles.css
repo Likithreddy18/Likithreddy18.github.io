@@ -258,7 +258,7 @@ img {
     color: var(--light-text);
 }
 
-.placeholder-image i {
+.profile-photo i {
     font-size: 5rem;
     margin-bottom: 1rem;
 }
