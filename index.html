@@ -3,809 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Likith Reddy Chintala | Operations Research & Data Science Professional</title>
+    <title>Likith Reddy Chintala — Data Scientist & AI Researcher</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div id="loading-screen">
-        <div class="loader">
-            <div class="loader-inner">
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
+    <!-- Grain overlay -->
+    <div class="grain"></div>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">LRC</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-inner hero-split">
+            <div class="hero-text">
+                <div class="hero-label reveal">Data Scientist & AI Researcher</div>
+                <h1 class="hero-title">
+                    <span class="reveal">Likith Reddy</span>
+                    <span class="reveal">Chintala</span>
+                </h1>
+                <p class="hero-sub reveal">
+                    Quantitative data scientist with 4+ years across trading, pricing 
+                    &amp; forecasting. Building systematic models that outperform 
+                    benchmarks by ~30%.
+                </p>
+                <div class="hero-meta reveal">
+                    <div class="hero-stat">
+                        <span class="stat-num">4+</span>
+                        <span class="stat-lbl">Years Experience</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-num">~30%</span>
+                        <span class="stat-lbl">Benchmark Gains</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-num">MS</span>
+                        <span class="stat-lbl">UT Austin ORIE</span>
+                    </div>
                 </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
+                <div class="hero-actions reveal">
+                    <a href="#experience" class="btn-primary">View Work</a>
+                    <a href="#contact" class="btn-outline">Get in Touch</a>
                 </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
+            </div>
+            <div class="hero-portrait reveal">
+                <div class="portrait-frame">
+                    <img src="images/profile_pic.JPG" alt="Likith Reddy Chintala" class="portrait-img">
+                    <div class="portrait-border"></div>
                 </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
+                <div class="portrait-tag">
+                    <span>Austin, TX</span>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
 
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
-
-    <header>
-        <nav id="navbar" class="glassmorphism">
-            <div class="container">
-                <h1 class="logo">
-                    <span class="logo-initial">L</span>
-                    <span class="logo-text">ikith Reddy</span>
-                </h1>
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-bg-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-            </div>
-            <div class="container">
-                <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="hero-text">
-                        <div class="greeting">👋 Hello, I'm</div>
-                        <h1 class="hero-title">
-                            <span class="gradient-text">Likith Reddy Chintala</span>
-                        </h1>
-                        <h2 class="hero-subtitle">
-                            <span class="typewriter"></span>
-                        </h2>
-                        <p class="hero-description">
-                            MS in Operations Research and Industrial Engineering from UT Austin. 
-                            Experienced in data analysis, optimization, and machine learning with a focus on 
-                            business impact and driving meaningful results.
-                        </p>
-                        <div class="hero-stats">
-                            <div class="stat">
-                                <span class="stat-number">3+</span>
-                                <span class="stat-label">Years Experience</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">10+</span>
-                                <span class="stat-label">Projects Completed</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">30%</span>
-                                <span class="stat-label">Process Improvement</span>
-                            </div>
-                        </div>
-                        <div class="cta-buttons">
-                            <a href="#projects" class="btn btn-primary btn-animated">
-                                <span>View My Work</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <a href="#contact" class="btn btn-secondary btn-animated">
-                                <span>Let's Connect</span>
-                                <i class="fas fa-comments"></i>
-                            </a>
-                        </div>
-                        <div class="social-preview">
-                            <a href="https://www.linkedin.com/in/likith-reddy-chintala-27099117a/" target="_blank" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/Likithreddy18" target="_blank" class="social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="mailto:chlikith@utexas.edu" class="social-link">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hero-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-                        <div class="image-container">
-                            <div class="image-backdrop"></div>
-                            <img src="images/profile_pic.JPG" alt="Likith Reddy Chintala" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="placeholder-image">
-                                <i class="fas fa-user-graduate"></i>
-                                <p>Your Photo Here</p>
-                            </div>
-                        </div>
-                        <div class="floating-elements">
-                            <div class="floating-card card-1">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Data Analysis</span>
-                            </div>
-                            <div class="floating-card card-2">
-                                <i class="fas fa-cogs"></i>
-                                <span>Optimization</span>
-                            </div>
-                            <div class="floating-card card-3">
-                                <i class="fas fa-robot"></i>
-                                <span>Machine Learning</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="scroll-indicator">
-                    <div class="scroll-text">Scroll to explore</div>
-                    <div class="scroll-arrow">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-tag">Get to know me</div>
-                    <h2 class="section-title">About Me</h2>
-                    <p class="section-subtitle">Passionate about turning data into actionable insights</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
-                        <div class="text-highlight">
-                            <h3>Transforming Data into Strategic Decisions</h3>
-                            <p>
-                                I'm a Master's student at The University of Texas at Austin specializing in 
-                                Operations Research and Industrial Engineering with a strong foundation in 
-                                data-driven decision-making and optimization.
-                            </p>
-                            <p>
-                                My experience spans from data analysis and machine learning to process optimization 
-                                and cross-functional team collaboration. I'm passionate about leveraging data to 
-                                solve complex business problems and drive meaningful results.
-                            </p>
-                            <p>
-                                Currently seeking full-time opportunities in Data Analysis, Operations, Data Science, 
-                                and Machine Learning roles. I will be graduating in May 2025 and am authorized to 
-                                work in the USA as an international student.
-                            </p>
-                        </div>
-                        <div class="achievement-highlights">
-                            <div class="highlight-item">
-                                <i class="fas fa-trophy"></i>
-                                <div>
-                                    <h4>Academic Excellence</h4>
-                                    <p>MS from UT Austin with focus on Operations Research</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-rocket"></i>
-                                <div>
-                                    <h4>Industry Impact</h4>
-                                    <p>Reduced project timelines by 30% through process optimization</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-users"></i>
-                                <div>
-                                    <h4>Leadership</h4>
-                                    <p>Led cross-functional teams and advised 20+ businesses</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-details" data-aos="fade-left" data-aos-duration="1000">
-                        <div class="detail-card">
-                            <div class="card-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h3>Education</h3>
-                            <div class="education-item">
-                                <div class="education-header">
-                                    <h4>Master of Science</h4>
-                                    <span class="year">2023-2025</span>
-                                </div>
-                                <p>Operations Research and Industrial Engineering</p>
-                                <p class="institution">The University of Texas at Austin</p>
-                                <div class="gpa">GPA: 3.44/4.00</div>
-                            </div>
-                            <div class="education-item">
-                                <div class="education-header">
-                                    <h4>Bachelor of Technology</h4>
-                                    <span class="year">2017-2021</span>
-                                </div>
-                                <p>Mechanical Engineering</p>
-                                <p class="institution">National Institute of Technology, Calicut</p>
-                                <div class="gpa">GPA: 3.33/4.00</div>
-                            </div>
-                        </div>
-                        <div class="detail-card">
-                            <div class="card-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <h3>Interests</h3>
-                            <div class="interests-grid">
-                                <span class="interest-tag">Data Science & ML</span>
-                                <span class="interest-tag">Operations Optimization</span>
-                                <span class="interest-tag">Business Analytics</span>
-                                <span class="interest-tag">Process Improvement</span>
-                                <span class="interest-tag">Statistical Analysis</span>
-                                <span class="interest-tag">Predictive Modeling</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section bg-dark">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-tag light">Professional Journey</div>
-                    <h2 class="section-title light">Work Experience</h2>
-                    <p class="section-subtitle light">Building expertise through diverse roles and challenging projects</p>
-                </div>
-                <div class="experience-timeline">
-                    <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="timeline-marker">
-                            <div class="marker-icon">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div class="timeline-date">Aug 2024 - Present</div>
-                                <div class="timeline-status current">Current Role</div>
-                            </div>
-                            <h3>Teaching Assistant</h3>
-                            <h4>Texas Venture Labs, Austin</h4>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>Assisted Prof. Ian Bidot in advising 20+ businesses on refining their business models</li>
-                                    <li>Analyzed and validated secondary research data, ensuring accuracy and extracting key market trends</li>
-                                    <li>Designed structured market validation frameworks, improving survey response rates by 80%</li>
-                                </ul>
-                            </div>
-                            <div class="skills-used">
-                                <span class="skill-pill">Market Research</span>
-                                <span class="skill-pill">Data Validation</span>
-                                <span class="skill-pill">Business Strategy</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <div class="timeline-marker">
-                            <div class="marker-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div class="timeline-date">May 2024 - Aug 2024</div>
-                            </div>
-                            <h3>Data Intern</h3>
-                            <h4>Construction Industry Institute (CII)</h4>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>Migrated data management from Excel-VBA to PostgreSQL, enhancing scalability and reducing data collection time by 20%</li>
-                                    <li>Built ETL pipelines using Kafka and Python, incorporating machine learning concepts</li>
-                                </ul>
-                            </div>
-                            <div class="skills-used">
-                                <span class="skill-pill">PostgreSQL</span>
-                                <span class="skill-pill">Kafka</span>
-                                <span class="skill-pill">Python</span>
-                                <span class="skill-pill">ETL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="timeline-marker">
-                            <div class="marker-icon">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div class="timeline-date">Jan 2024 - Apr 2024</div>
-                            </div>
-                            <h3>Associate Consultant</h3>
-                            <h4>Texas Venture Labs, Austin</h4>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>Conducted comprehensive market validation and financial modeling using predictive modeling and statistical analysis</li>
-                                    <li>Developed dynamic pricing strategy with interactive Tableau dashboard, projecting 15% revenue increase</li>
-                                    <li>Led A/B testing across multiple industry verticals using statistical methodologies</li>
-                                </ul>
-                            </div>
-                            <div class="skills-used">
-                                <span class="skill-pill">Tableau</span>
-                                <span class="skill-pill">A/B Testing</span>
-                                <span class="skill-pill">Statistical Analysis</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <div class="timeline-marker">
-                            <div class="marker-icon">
-                                <i class="fas fa-analytics"></i>
-                            </div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div class="timeline-date">Apr 2022 - Jul 2023</div>
-                            </div>
-                            <h3>Senior Analyst</h3>
-                            <h4>KANTAR, Bengaluru</h4>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>Streamlined data cleaning processes using MS Excel and SQL, reducing project timelines by 30%</li>
-                                    <li>Built efficient data pipeline models using Python and VBA to extract brand power metrics</li>
-                                    <li>Coordinated cross-functional teams to reduce project timelines by 15% through agile methodologies</li>
-                                </ul>
-                            </div>
-                            <div class="skills-used">
-                                <span class="skill-pill">SQL</span>
-                                <span class="skill-pill">Python</span>
-                                <span class="skill-pill">Data Pipelines</span>
-                                <span class="skill-pill">Team Leadership</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-tag">Portfolio</div>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">Showcase of my technical skills and problem-solving abilities</p>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-card featured" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="project-image">
-                            <img src="/api/placeholder/600/400" alt="Perishable Inventory Routing Problem">
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <i class="fas fa-truck"></i>
-                                    <p>Logistics Optimization</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <div class="project-header">
-                                <h3>Multi-objective Integrated Production and Distribution Planning</h3>
-                                <div class="project-status featured-badge">Featured</div>
-                            </div>
-                            <p>Designed multi-product, multi-plant logistics models for perishable products, improving profit by 30% through waste reduction using advanced optimization algorithms.</p>
-                            <div class="project-impact">
-                                <div class="impact-item">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span>30% Profit Increase</span>
-                                </div>
-                                <div class="impact-item">
-                                    <i class="fas fa-recycle"></i>
-                                    <span>Waste Reduction</span>
-                                </div>
-                            </div>
-                            <div class="project-tags">
-                                <span>Optimization</span>
-                                <span>Logistics</span>
-                                <span>Tableau</span>
-                                <span>NSGA-II</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn btn-sm btn-primary">Case Study</a>
-                                <a href="https://github.com/Likithreddy18/Perishable-Inventory-Routing-Problem" class="btn btn-sm btn-outline">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <div class="project-image">
-                            <img src="/api/placeholder/600/400" alt="GANs for Microstructure Synthesis">
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <i class="fas fa-brain"></i>
-                                    <p>Deep Learning</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Generative Adversarial Networks for Microstructure Synthesis</h3>
-                            <p>Developed GANs to synthesize high-quality microstructures using a limited dataset, presented at SICE-2022 conference.</p>
-                            <div class="project-impact">
-                                <div class="impact-item">
-                                    <i class="fas fa-trophy"></i>
-                                    <span>Conference Paper</span>
-                                </div>
-                                <div class="impact-item">
-                                    <i class="fas fa-images"></i>
-                                    <span>21 Structure Types</span>
-                                </div>
-                            </div>
-                            <div class="project-tags">
-                                <span>Machine Learning</span>
-                                <span>GANs</span>
-                                <span>PyTorch</span>
-                                <span>Research</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn btn-sm btn-primary">Case Study</a>
-                                <a href="https://github.com/Likithreddy18/GANs" class="btn btn-sm btn-outline">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="project-image">
-                            <img src="/api/placeholder/600/400" alt="Data Cleaning">
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <i class="fas fa-broom"></i>
-                                    <p>Data Processing</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Comprehensive Data Cleaning Guide</h3>
-                            <p>A complete roadmap for beginners on data cleaning and analysis techniques to ensure data readiness for modeling.</p>
-                            <div class="project-impact">
-                                <div class="impact-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Educational Resource</span>
-                                </div>
-                                <div class="impact-item">
-                                    <i class="fas fa-code"></i>
-                                    <span>Python Guide</span>
-                                </div>
-                            </div>
-                            <div class="project-tags">
-                                <span>Data Analysis</span>
-                                <span>Python</span>
-                                <span>Pandas</span>
-                                <span>Tutorial</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn btn-sm btn-primary">View Guide</a>
-                                <a href="https://github.com/Likithreddy18/Data-Cleaning" class="btn btn-sm btn-outline">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="more-projects" data-aos="fade-up" data-aos-delay="300">
-                    <a href="https://github.com/Likithreddy18?tab=repositories" class="btn btn-outline btn-large">
-                        <span>View All Projects</span>
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section bg-light">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-tag">Expertise</div>
-                    <h2 class="section-title">Skills & Technologies</h2>
-                    <p class="section-subtitle">Comprehensive toolkit for data science and operations research</p>
-                </div>
-                <div class="skills-container">
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <h3>Machine Learning & Data Science</h3>
-                        </div>
-                        <div class="skill-grid">
-                            <div class="skill-item advanced">
-                                <span class="skill-name">Machine Learning</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item advanced">
-                                <span class="skill-name">Statistical Analysis</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item intermediate">
-                                <span class="skill-name">Natural Language Processing</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item intermediate">
-                                <span class="skill-name">Generative AI</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="80"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item advanced">
-                                <span class="skill-name">Data Visualization</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="88"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item advanced">
-                                <span class="skill-name">Predictive Modeling</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="87"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h3>Programming Languages</h3>
-                        </div>
-                        <div class="skill-grid">
-                            <div class="skill-item expert">
-                                <span class="skill-name">Python</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="95"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item advanced">
-                                <span class="skill-name">R</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="82"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item expert">
-                                <span class="skill-name">SQL</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="92"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item intermediate">
-                                <span class="skill-name">VBA</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="70"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <h3>Tools & Libraries</h3>
-                        </div>
-                        <div class="skill-grid">
-                            <div class="skill-item advanced">
-                                <span class="skill-name">Scikit-Learn</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="88"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item advanced">
-                                <span class="skill-name">PyTorch</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="83"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item intermediate">
-                                <span class="skill-name">Keras</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="78"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item expert">
-                                <span class="skill-name">Tableau</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item advanced">
-                                <span class="skill-name">Excel</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item intermediate">
-                                <span class="skill-name">AWS</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="72"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h3>Databases & Cloud</h3>
-                        </div>
-                        <div class="skill-grid">
-                            <div class="skill-item advanced">
-                                <span class="skill-name">MySQL</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item advanced">
-                                <span class="skill-name">PostgreSQL</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="88"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item intermediate">
-                                <span class="skill-name">AWS S3</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="75"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item intermediate">
-                                <span class="skill-name">Kafka</span>
-                                <div class="skill-level">
-                                    <div class="skill-bar" data-level="70"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section bg-gradient">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-tag light">Let's Connect</div>
-                    <h2 class="section-title light">Get In Touch</h2>
-                    <p class="section-subtitle light">Ready to discuss opportunities and collaborate on exciting projects</p>
-                </div>
-                <div class="contact-container">
-                    <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
-                        <div class="contact-card">
-                            <div class="contact-header">
-                                <h3>Let's Start a Conversation</h3>
-                                <p>I'm always open to discussing new opportunities, interesting projects, or just having a chat about data science and operations research.</p>
-                            </div>
-                            <div class="contact-methods">
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <h4>Email</h4>
-                                        <p>chlikith@utexas.edu</p>
-                                        <a href="mailto:chlikith@utexas.edu" class="contact-link">Send a message</a>
-                                    </div>
-                                </div>
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-phone"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <h4>Phone</h4>
-                                        <p>+1-737-328-2796</p>
-                                        <a href="tel:+17373282796" class="contact-link">Give me a call</a>
-                                    </div>
-                                </div>
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="contact-details">
-                                        <h4>Location</h4>
-                                        <p>Austin, Texas</p>
-                                        <span class="contact-link">Available for relocation</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="social-connect">
-                                <h4>Connect with me</h4>
-                                <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/likith-reddy-chintala-27099117a/" target="_blank" class="social-link linkedin">
-                                        <i class="fab fa-linkedin"></i>
-                                        <span>LinkedIn</span>
-                                    </a>
-                                    <a href="https://github.com/Likithreddy18" target="_blank" class="social-link github">
-                                        <i class="fab fa-github"></i>
-                                        <span>GitHub</span>
-                                    </a>
-                                    <a href="mailto:chlikith@utexas.edu" class="social-link email">
-                                        <i class="fas fa-envelope"></i>
-                                        <span>Email</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form-wrapper" data-aos="fade-left" data-aos-duration="1000">
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-header">
-                                <h3>Send me a message</h3>
-                                <p>Fill out the form below and I'll get back to you as soon as possible.</p>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Full Name *</label>
-                                    <input type="text" id="name" name="name" required>
-                                    <span class="form-line"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required>
-                                    <span class="form-line"></span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject *</label>
-                                <input type="text" id="subject" name="subject" required>
-                                <span class="form-line"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                                <span class="form-line"></span>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-large btn-animated">
-                                <span>Send Message</span>
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
+    <!-- About -->
+    <section id="about" class="section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Likith Reddy Chintala. All Rights Reserved.</p>
-                    <p>Made with <i class="fas fa-heart"></i> and lots of <i class="fas fa-coffee"></i></p>
+            <div class="section-grid about-grid">
+                <div class="about-left">
+                    <span class="section-tag reveal">01 — About</span>
+                    <h2 class="section-heading reveal">Turning raw data into<br><em>strategic edge</em></h2>
+                    <p class="about-text reveal">
+                        I'm a quantitative data scientist specializing in systematic trading, 
+                        demand forecasting, and ML-driven optimization. My work spans building 
+                        equity models with leak-free backtests, shipping multi-agent LLM platforms, 
+                        and re-platforming legacy data systems to cloud-native architectures.
+                    </p>
+                    <p class="about-text reveal">
+                        I hold an M.S. in Operations Research &amp; Industrial Engineering 
+                        (Data Analytics Track) from UT Austin, with a B.Tech in Mechanical 
+                        Engineering from NIT Calicut.
+                    </p>
                 </div>
-                <div class="footer-links">
-                    <a href="#home">Back to Top</a>
-                    <a href="mailto:chlikith@utexas.edu">Contact</a>
-                    <a href="https://www.linkedin.com/in/likith-reddy-chintala-27099117a/" target="_blank">LinkedIn</a>
+                <div class="about-right reveal">
+                    <div class="about-card">
+                        <div class="about-card-header">Education</div>
+                        <div class="edu-item">
+                            <div class="edu-degree">M.S. Operations Research</div>
+                            <div class="edu-school">University of Texas at Austin</div>
+                            <div class="edu-year">2023 – 2025</div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-degree">B.Tech Mechanical Engineering</div>
+                            <div class="edu-school">NIT Calicut</div>
+                            <div class="edu-year">2017 – 2021</div>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-header">Core Focus</div>
+                        <div class="focus-tags">
+                            <span>Systematic Trading</span>
+                            <span>Time-Series Modeling</span>
+                            <span>LLMOps & RAG</span>
+                            <span>MLOps & CI/CD</span>
+                            <span>Optimization</span>
+                            <span>A/B Testing</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section section-dark">
+        <div class="container">
+            <span class="section-tag reveal">02 — Experience</span>
+            <h2 class="section-heading reveal">Where I've <em>built things</em></h2>
+
+            <div class="exp-list">
+                <article class="exp-item reveal">
+                    <div class="exp-header">
+                        <div class="exp-left">
+                            <h3 class="exp-role">AI Researcher</h3>
+                            <div class="exp-company">Nirvana Systems</div>
+                        </div>
+                        <div class="exp-right">
+                            <span class="exp-date">Aug 2025 – Present</span>
+                            <span class="exp-loc">Austin, TX</span>
+                        </div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Developed systematic equity and market direction models improving backtested performance by ~30% over prior benchmarks used for live trading.</li>
+                        <li>Co-built Python-based automation for data processing, model scoring, and trade signal generation — reducing manual intervention and tightening backtest-to-live alignment.</li>
+                        <li>Partnered with Founder/CEO to define research questions, run leak-free backtests, and validate signals before production deployment.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>Systematic Trading</span>
+                        <span>Python</span>
+                        <span>Time-Series</span>
+                        <span>Automation</span>
+                    </div>
+                </article>
+
+                <article class="exp-item reveal">
+                    <div class="exp-header">
+                        <div class="exp-left">
+                            <h3 class="exp-role">Founding Data Engineer / Scientist</h3>
+                            <div class="exp-company">Jiva-ai (Entrepreneurial Capstone)</div>
+                        </div>
+                        <div class="exp-right">
+                            <span class="exp-date">Nov 2024 – Aug 2025</span>
+                            <span class="exp-loc">Austin, TX</span>
+                        </div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Shipped a 5-agent LangGraph LLM platform, cutting grocery waste 28% and delivery miles 32%.</li>
+                        <li>Deployed LangChain RAG pipeline for store-level promo copy; A/B test drove +8% CTR across 10k emails.</li>
+                        <li>Automated retraining in SageMaker (Lambda + MLflow), slashing forecast prep from 8 hrs to 45 min.</li>
+                        <li>Containerized models (FastAPI + Docker); CI/CD drift alerts via GitHub Actions reduced incident triage 40%.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>LangGraph</span>
+                        <span>RAG</span>
+                        <span>SageMaker</span>
+                        <span>Docker</span>
+                        <span>CI/CD</span>
+                    </div>
+                </article>
+
+                <article class="exp-item reveal">
+                    <div class="exp-header">
+                        <div class="exp-left">
+                            <h3 class="exp-role">Data Scientist</h3>
+                            <div class="exp-company">Construction Industry Institute (CII)</div>
+                        </div>
+                        <div class="exp-right">
+                            <span class="exp-date">May 2024 – Aug 2024</span>
+                            <span class="exp-loc">Austin, TX</span>
+                        </div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Re-platformed Excel/VBA workflows to AWS Redshift star-schema; cut query latency 20% with sub-second dashboard refresh.</li>
+                        <li>Orchestrated real-time ELT (Glue, EMR + Kafka), cutting analyst prep time 40%.</li>
+                        <li>Built GLM + gradient-boost ensemble to predict repair OPEX from 1.2M records; adopted by risk teams.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>AWS Redshift</span>
+                        <span>Kafka</span>
+                        <span>ETL</span>
+                        <span>XGBoost</span>
+                    </div>
+                </article>
+
+                <article class="exp-item reveal">
+                    <div class="exp-header">
+                        <div class="exp-left">
+                            <h3 class="exp-role">Associate Consultant (Data Science)</h3>
+                            <div class="exp-company">Texas Venture Labs</div>
+                        </div>
+                        <div class="exp-right">
+                            <span class="exp-date">Jan 2024 – Apr 2024</span>
+                            <span class="exp-loc">Austin, TX</span>
+                        </div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Built interactive Tableau dashboard for dynamic pricing; scenario analysis projected 15% revenue uplift.</li>
+                        <li>Led A/B testing across 3 verticals, optimizing customer segmentation and accelerating market entry by 2 months.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>Tableau</span>
+                        <span>A/B Testing</span>
+                        <span>Pricing Strategy</span>
+                    </div>
+                </article>
+
+                <article class="exp-item reveal">
+                    <div class="exp-header">
+                        <div class="exp-left">
+                            <h3 class="exp-role">Senior Data Analyst</h3>
+                            <div class="exp-company">Kantar</div>
+                        </div>
+                        <div class="exp-right">
+                            <span class="exp-date">Apr 2021 – Jul 2023</span>
+                            <span class="exp-loc">Bengaluru, India</span>
+                        </div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Streamlined data-cleaning pipelines across 5 projects, reducing timelines 30%.</li>
+                        <li>Built Power BI "Insights Hub" adopted by 20+ brand teams, influencing $2M incremental spend shifts across 28 countries.</li>
+                        <li>Coordinated cross-functional teams, trimming project timelines 15% via Agile practices.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>Power BI</span>
+                        <span>SQL</span>
+                        <span>Agile</span>
+                        <span>Excel</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="container">
+            <span class="section-tag reveal">03 — Projects</span>
+            <h2 class="section-heading reveal">Selected <em>work</em></h2>
+
+            <div class="proj-grid">
+                <a href="https://github.com/Likithreddy18/Perishable-Inventory-Routing-Problem" target="_blank" class="proj-card reveal">
+                    <div class="proj-num">01</div>
+                    <h3 class="proj-title">Benchmarking Demand-Forecasting with AI</h3>
+                    <p class="proj-desc">
+                        Engineered a meta-learning engine over 44 heterogeneous datasets, reducing model-selection 
+                        cost 63%. Ranked 13 forecasting models balancing nCRPS accuracy and inference latency.
+                    </p>
+                    <div class="proj-tags">
+                        <span>Deep Learning</span>
+                        <span>Time Series</span>
+                        <span>Meta-Learning</span>
+                    </div>
+                    <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="https://github.com/Likithreddy18/GANs" target="_blank" class="proj-card reveal">
+                    <div class="proj-num">02</div>
+                    <h3 class="proj-title">Process-Structure Linkages via GANs</h3>
+                    <p class="proj-desc">
+                        Synthesized 21 microstructure classes from a 600-image dataset with a fine-tuned GAN. 
+                        Only undergrad paper presented at SICE-2022 conference.
+                    </p>
+                    <div class="proj-tags">
+                        <span>PyTorch</span>
+                        <span>GANs</span>
+                        <span>Research</span>
+                    </div>
+                    <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="https://github.com/Likithreddy18/Perishable-Inventory-Routing-Problem" target="_blank" class="proj-card reveal">
+                    <div class="proj-num">03</div>
+                    <h3 class="proj-title">Multi-Objective Production &amp; Distribution Planning</h3>
+                    <p class="proj-desc">
+                        Designed multi-product logistics models for perishable goods, improving profit 30% 
+                        through waste reduction using NSGA-II optimization.
+                    </p>
+                    <div class="proj-tags">
+                        <span>Optimization</span>
+                        <span>NSGA-II</span>
+                        <span>Logistics</span>
+                    </div>
+                    <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+
+                <a href="https://github.com/Likithreddy18/Data-Cleaning" target="_blank" class="proj-card reveal">
+                    <div class="proj-num">04</div>
+                    <h3 class="proj-title">Comprehensive Data Cleaning Guide</h3>
+                    <p class="proj-desc">
+                        A complete roadmap for beginners covering data cleaning and analysis 
+                        techniques to ensure data readiness for modeling.
+                    </p>
+                    <div class="proj-tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Tutorial</span>
+                    </div>
+                    <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+
+            <div class="proj-more reveal">
+                <a href="https://github.com/Likithreddy18?tab=repositories" target="_blank" class="btn-outline">
+                    All Repositories <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-dark">
+        <div class="container">
+            <span class="section-tag reveal">04 — Skills</span>
+            <h2 class="section-heading reveal">Technical <em>toolkit</em></h2>
+
+            <div class="skills-grid">
+                <div class="skill-group reveal">
+                    <h3 class="skill-group-title">Statistical Inference</h3>
+                    <div class="skill-items">
+                        <span>R</span><span>Python</span><span>Pandas</span>
+                        <span>Scikit-learn</span><span>PyTorch</span><span>Statsmodels</span>
+                        <span>Control Limits</span><span>A/B Tests</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h3 class="skill-group-title">ML & Optimization</h3>
+                    <div class="skill-items">
+                        <span>XGBoost</span><span>LightGBM</span><span>PyTorch</span>
+                        <span>Mixed-Integer Optimization</span><span>SARIMAX</span><span>NLP</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h3 class="skill-group-title">SQL & Big Data</h3>
+                    <div class="skill-items">
+                        <span>PostgreSQL</span><span>AWS Redshift</span>
+                        <span>BigQuery</span><span>Snowflake</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h3 class="skill-group-title">AWS & MLOps</h3>
+                    <div class="skill-items">
+                        <span>SageMaker</span><span>Lambda</span><span>Step Functions</span>
+                        <span>Docker</span><span>MLflow</span><span>GitHub Actions</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h3 class="skill-group-title">Gen AI / LLM</h3>
+                    <div class="skill-items">
+                        <span>SFT & RLHF</span><span>vLLM</span><span>RAG</span>
+                        <span>LangChain</span><span>HuggingFace</span>
+                        <span>OpenAI SDK</span><span>Anthropic SDK</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h3 class="skill-group-title">Visualization & BI</h3>
+                    <div class="skill-items">
+                        <span>Tableau</span><span>Power BI</span>
+                        <span>Grafana</span><span>Predictive Modeling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <span class="section-tag reveal">05 — Contact</span>
+            <h2 class="section-heading contact-heading reveal">Let's <em>connect</em></h2>
+            <p class="contact-sub reveal">
+                Open to opportunities in Data Science, AI/ML, and quantitative research roles.
+            </p>
+            <div class="contact-links reveal">
+                <a href="mailto:chlikith@utexas.edu" class="contact-item-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>chlikith@utexas.edu</span>
+                </a>
+                <a href="tel:+17373282796" class="contact-item-link">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 737 328 2796</span>
+                </a>
+                <a href="https://www.linkedin.com/in/likith-reddy-chintala/" target="_blank" class="contact-item-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Likithreddy18" target="_blank" class="contact-item-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+            <div class="contact-location reveal">Austin, TX — Available for relocation</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <span>&copy; 2026 Likith Reddy Chintala</span>
+            <a href="#hero" class="back-top">Back to top <i class="fas fa-arrow-up"></i></a>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
