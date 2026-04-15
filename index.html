@@ -5,122 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Likith Reddy Chintala — Data Scientist & AI Researcher</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Grain overlay -->
-    <div class="grain"></div>
+    <!-- Background effects -->
+    <div class="bg-grid"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
 
-    <!-- Navigation -->
+    <!-- Nav -->
     <nav id="nav">
         <div class="nav-inner">
-            <a href="#hero" class="nav-logo">LRC</a>
+            <a href="#hero" class="nav-logo">
+                <span class="logo-dot"></span>
+                likith<span class="logo-accent">reddy</span>
+            </a>
             <div class="nav-links" id="navLinks">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact" class="nav-cta">Let's Talk</a>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section id="hero" class="hero">
-        <div class="hero-inner hero-split">
-            <div class="hero-text">
-                <div class="hero-label reveal">Data Scientist & AI Researcher</div>
-                <h1 class="hero-title">
-                    <span class="reveal">Likith Reddy</span>
-                    <span class="reveal">Chintala</span>
+    <section id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    <span class="badge-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-h1 reveal">
+                    I build models that<br>
+                    <span class="hero-gradient">move markets.</span>
                 </h1>
-                <p class="hero-sub reveal">
-                    Quantitative data scientist with 4+ years across trading, pricing 
-                    &amp; forecasting. Building systematic models that outperform 
-                    benchmarks by ~30%.
+                <p class="hero-p reveal">
+                    Quantitative data scientist with 4+ years across systematic trading, 
+                    pricing &amp; forecasting. MS in Operations Research from UT Austin.
                 </p>
-                <div class="hero-meta reveal">
-                    <div class="hero-stat">
-                        <span class="stat-num">4+</span>
-                        <span class="stat-lbl">Years Experience</span>
+                <div class="hero-metrics reveal">
+                    <div class="metric">
+                        <div class="metric-val">~30%</div>
+                        <div class="metric-lbl">Above Benchmark</div>
                     </div>
-                    <div class="hero-stat">
-                        <span class="stat-num">~30%</span>
-                        <span class="stat-lbl">Benchmark Gains</span>
+                    <div class="metric-divider"></div>
+                    <div class="metric">
+                        <div class="metric-val">4+</div>
+                        <div class="metric-lbl">Years Experience</div>
                     </div>
-                    <div class="hero-stat">
-                        <span class="stat-num">MS</span>
-                        <span class="stat-lbl">UT Austin ORIE</span>
+                    <div class="metric-divider"></div>
+                    <div class="metric">
+                        <div class="metric-val">28%</div>
+                        <div class="metric-lbl">Waste Reduced</div>
                     </div>
                 </div>
-                <div class="hero-actions reveal">
-                    <a href="#experience" class="btn-primary">View Work</a>
-                    <a href="#contact" class="btn-outline">Get in Touch</a>
+                <div class="hero-btns reveal">
+                    <a href="#experience" class="btn-glow">
+                        <span>View my work</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/likith-reddy-chintala/" target="_blank" class="btn-ghost">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Likithreddy18" target="_blank" class="btn-ghost">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:chlikith@utexas.edu" class="btn-ghost">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
-            <div class="hero-portrait reveal">
-                <div class="portrait-frame">
-                    <img src="images/profile_pic.JPG" alt="Likith Reddy Chintala" class="portrait-img">
-                    <div class="portrait-border"></div>
+            <div class="hero-photo reveal">
+                <div class="photo-wrapper">
+                    <img src="images/profile_pic.JPG" alt="Likith Reddy Chintala">
+                    <div class="photo-ring"></div>
+                    <div class="photo-ring photo-ring-2"></div>
                 </div>
-                <div class="portrait-tag">
-                    <span>Austin, TX</span>
+                <div class="photo-card photo-card-1">
+                    <i class="fas fa-chart-line"></i> Systematic Trading
+                </div>
+                <div class="photo-card photo-card-2">
+                    <i class="fas fa-robot"></i> LLM / RAG
+                </div>
+                <div class="photo-card photo-card-3">
+                    <i class="fas fa-brain"></i> Deep Learning
                 </div>
             </div>
-        </div>
-        <div class="hero-scroll">
-            <div class="scroll-line"></div>
-            <span>Scroll</span>
         </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
         <div class="container">
-            <div class="section-grid about-grid">
-                <div class="about-left">
-                    <span class="section-tag reveal">01 — About</span>
-                    <h2 class="section-heading reveal">Turning raw data into<br><em>strategic edge</em></h2>
-                    <p class="about-text reveal">
-                        I'm a quantitative data scientist specializing in systematic trading, 
-                        demand forecasting, and ML-driven optimization. My work spans building 
-                        equity models with leak-free backtests, shipping multi-agent LLM platforms, 
-                        and re-platforming legacy data systems to cloud-native architectures.
+            <div class="section-label reveal"><span>01</span> About</div>
+            <div class="about-layout">
+                <div class="about-left reveal">
+                    <h2 class="section-h2">From raw data to <span class="text-glow">production signals</span></h2>
+                    <p class="about-p">
+                        I specialize in building systematic equity models with leak-free backtests, 
+                        shipping multi-agent LLM platforms, and re-platforming legacy data systems 
+                        to cloud-native architectures. My work lives at the intersection of rigorous 
+                        quantitative research and production ML engineering.
                     </p>
-                    <p class="about-text reveal">
-                        I hold an M.S. in Operations Research &amp; Industrial Engineering 
-                        (Data Analytics Track) from UT Austin, with a B.Tech in Mechanical 
-                        Engineering from NIT Calicut.
+                    <p class="about-p">
+                        When I'm not training models, I'm partnering directly with leadership to 
+                        define research questions and ensure only validated signals make it to production.
                     </p>
                 </div>
-                <div class="about-right reveal">
-                    <div class="about-card">
-                        <div class="about-card-header">Education</div>
-                        <div class="edu-item">
-                            <div class="edu-degree">M.S. Operations Research</div>
-                            <div class="edu-school">University of Texas at Austin</div>
-                            <div class="edu-year">2023 – 2025</div>
-                        </div>
-                        <div class="edu-item">
-                            <div class="edu-degree">B.Tech Mechanical Engineering</div>
-                            <div class="edu-school">NIT Calicut</div>
-                            <div class="edu-year">2017 – 2021</div>
+                <div class="about-right">
+                    <div class="edu-card reveal">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <div class="edu-title">M.S. Operations Research & Industrial Engineering</div>
+                            <div class="edu-meta">University of Texas at Austin · 2023–2025</div>
+                            <div class="edu-track">Data Analytics Track</div>
                         </div>
                     </div>
-                    <div class="about-card">
-                        <div class="about-card-header">Core Focus</div>
-                        <div class="focus-tags">
-                            <span>Systematic Trading</span>
-                            <span>Time-Series Modeling</span>
-                            <span>LLMOps & RAG</span>
-                            <span>MLOps & CI/CD</span>
-                            <span>Optimization</span>
-                            <span>A/B Testing</span>
+                    <div class="edu-card reveal">
+                        <div class="edu-icon"><i class="fas fa-university"></i></div>
+                        <div>
+                            <div class="edu-title">B.Tech Mechanical Engineering</div>
+                            <div class="edu-meta">National Institute of Technology, Calicut · 2017–2021</div>
                         </div>
                     </div>
                 </div>
@@ -129,131 +142,112 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="section section-dark">
+    <section id="experience" class="section">
         <div class="container">
-            <span class="section-tag reveal">02 — Experience</span>
-            <h2 class="section-heading reveal">Where I've <em>built things</em></h2>
+            <div class="section-label reveal"><span>02</span> Experience</div>
+            <h2 class="section-h2 reveal">Where I've shipped <span class="text-glow">real impact</span></h2>
 
-            <div class="exp-list">
-                <article class="exp-item reveal">
-                    <div class="exp-header">
-                        <div class="exp-left">
-                            <h3 class="exp-role">AI Researcher</h3>
-                            <div class="exp-company">Nirvana Systems</div>
+            <div class="exp-timeline">
+                <div class="exp-card reveal">
+                    <div class="exp-top">
+                        <div>
+                            <h3 class="exp-title">AI Researcher</h3>
+                            <div class="exp-org">Nirvana Systems</div>
                         </div>
-                        <div class="exp-right">
-                            <span class="exp-date">Aug 2025 – Present</span>
-                            <span class="exp-loc">Austin, TX</span>
+                        <div class="exp-meta">
+                            <span class="exp-badge current">Current</span>
+                            <div class="exp-date">Aug 2025 – Present · Austin, TX</div>
                         </div>
                     </div>
-                    <ul class="exp-bullets">
+                    <ul class="exp-list">
                         <li>Developed systematic equity and market direction models improving backtested performance by ~30% over prior benchmarks used for live trading.</li>
-                        <li>Co-built Python-based automation for data processing, model scoring, and trade signal generation — reducing manual intervention and tightening backtest-to-live alignment.</li>
-                        <li>Partnered with Founder/CEO to define research questions, run leak-free backtests, and validate signals before production deployment.</li>
+                        <li>Co-built Python automation for data processing, model scoring, and trade signal generation — reducing manual intervention.</li>
+                        <li>Partnered with Founder/CEO to define research questions, run leak-free backtests, and validate signals before production.</li>
                     </ul>
-                    <div class="exp-tags">
-                        <span>Systematic Trading</span>
-                        <span>Python</span>
-                        <span>Time-Series</span>
-                        <span>Automation</span>
+                    <div class="exp-chips">
+                        <span>Systematic Trading</span><span>Python</span><span>Time-Series</span><span>Automation</span>
                     </div>
-                </article>
+                </div>
 
-                <article class="exp-item reveal">
-                    <div class="exp-header">
-                        <div class="exp-left">
-                            <h3 class="exp-role">Founding Data Engineer / Scientist</h3>
-                            <div class="exp-company">Jiva-ai (Entrepreneurial Capstone)</div>
+                <div class="exp-card reveal">
+                    <div class="exp-top">
+                        <div>
+                            <h3 class="exp-title">Founding Data Engineer / Scientist</h3>
+                            <div class="exp-org">Jiva-ai · Entrepreneurial Capstone</div>
                         </div>
-                        <div class="exp-right">
-                            <span class="exp-date">Nov 2024 – Aug 2025</span>
-                            <span class="exp-loc">Austin, TX</span>
+                        <div class="exp-meta">
+                            <div class="exp-date">Nov 2024 – Aug 2025 · Austin, TX</div>
                         </div>
                     </div>
-                    <ul class="exp-bullets">
+                    <ul class="exp-list">
                         <li>Shipped a 5-agent LangGraph LLM platform, cutting grocery waste 28% and delivery miles 32%.</li>
                         <li>Deployed LangChain RAG pipeline for store-level promo copy; A/B test drove +8% CTR across 10k emails.</li>
                         <li>Automated retraining in SageMaker (Lambda + MLflow), slashing forecast prep from 8 hrs to 45 min.</li>
                         <li>Containerized models (FastAPI + Docker); CI/CD drift alerts via GitHub Actions reduced incident triage 40%.</li>
                     </ul>
-                    <div class="exp-tags">
-                        <span>LangGraph</span>
-                        <span>RAG</span>
-                        <span>SageMaker</span>
-                        <span>Docker</span>
-                        <span>CI/CD</span>
+                    <div class="exp-chips">
+                        <span>LangGraph</span><span>RAG</span><span>SageMaker</span><span>Docker</span><span>FastAPI</span><span>CI/CD</span>
                     </div>
-                </article>
+                </div>
 
-                <article class="exp-item reveal">
-                    <div class="exp-header">
-                        <div class="exp-left">
-                            <h3 class="exp-role">Data Scientist</h3>
-                            <div class="exp-company">Construction Industry Institute (CII)</div>
+                <div class="exp-card reveal">
+                    <div class="exp-top">
+                        <div>
+                            <h3 class="exp-title">Data Scientist</h3>
+                            <div class="exp-org">Construction Industry Institute (CII)</div>
                         </div>
-                        <div class="exp-right">
-                            <span class="exp-date">May 2024 – Aug 2024</span>
-                            <span class="exp-loc">Austin, TX</span>
+                        <div class="exp-meta">
+                            <div class="exp-date">May 2024 – Aug 2024 · Austin, TX</div>
                         </div>
                     </div>
-                    <ul class="exp-bullets">
-                        <li>Re-platformed Excel/VBA workflows to AWS Redshift star-schema; cut query latency 20% with sub-second dashboard refresh.</li>
+                    <ul class="exp-list">
+                        <li>Re-platformed Excel/VBA workflows to AWS Redshift star-schema; cut query latency 20%.</li>
                         <li>Orchestrated real-time ELT (Glue, EMR + Kafka), cutting analyst prep time 40%.</li>
                         <li>Built GLM + gradient-boost ensemble to predict repair OPEX from 1.2M records; adopted by risk teams.</li>
                     </ul>
-                    <div class="exp-tags">
-                        <span>AWS Redshift</span>
-                        <span>Kafka</span>
-                        <span>ETL</span>
-                        <span>XGBoost</span>
+                    <div class="exp-chips">
+                        <span>AWS Redshift</span><span>Kafka</span><span>Glue</span><span>XGBoost</span>
                     </div>
-                </article>
+                </div>
 
-                <article class="exp-item reveal">
-                    <div class="exp-header">
-                        <div class="exp-left">
-                            <h3 class="exp-role">Associate Consultant (Data Science)</h3>
-                            <div class="exp-company">Texas Venture Labs</div>
+                <div class="exp-card reveal">
+                    <div class="exp-top">
+                        <div>
+                            <h3 class="exp-title">Associate Consultant · Data Science</h3>
+                            <div class="exp-org">Texas Venture Labs</div>
                         </div>
-                        <div class="exp-right">
-                            <span class="exp-date">Jan 2024 – Apr 2024</span>
-                            <span class="exp-loc">Austin, TX</span>
+                        <div class="exp-meta">
+                            <div class="exp-date">Jan 2024 – Apr 2024 · Austin, TX</div>
                         </div>
                     </div>
-                    <ul class="exp-bullets">
+                    <ul class="exp-list">
                         <li>Built interactive Tableau dashboard for dynamic pricing; scenario analysis projected 15% revenue uplift.</li>
                         <li>Led A/B testing across 3 verticals, optimizing customer segmentation and accelerating market entry by 2 months.</li>
                     </ul>
-                    <div class="exp-tags">
-                        <span>Tableau</span>
-                        <span>A/B Testing</span>
-                        <span>Pricing Strategy</span>
+                    <div class="exp-chips">
+                        <span>Tableau</span><span>A/B Testing</span><span>Pricing Strategy</span><span>R</span>
                     </div>
-                </article>
+                </div>
 
-                <article class="exp-item reveal">
-                    <div class="exp-header">
-                        <div class="exp-left">
-                            <h3 class="exp-role">Senior Data Analyst</h3>
-                            <div class="exp-company">Kantar</div>
+                <div class="exp-card reveal">
+                    <div class="exp-top">
+                        <div>
+                            <h3 class="exp-title">Senior Data Analyst</h3>
+                            <div class="exp-org">Kantar</div>
                         </div>
-                        <div class="exp-right">
-                            <span class="exp-date">Apr 2021 – Jul 2023</span>
-                            <span class="exp-loc">Bengaluru, India</span>
+                        <div class="exp-meta">
+                            <div class="exp-date">Apr 2021 – Jul 2023 · Bengaluru, India</div>
                         </div>
                     </div>
-                    <ul class="exp-bullets">
+                    <ul class="exp-list">
                         <li>Streamlined data-cleaning pipelines across 5 projects, reducing timelines 30%.</li>
                         <li>Built Power BI "Insights Hub" adopted by 20+ brand teams, influencing $2M incremental spend shifts across 28 countries.</li>
                         <li>Coordinated cross-functional teams, trimming project timelines 15% via Agile practices.</li>
                     </ul>
-                    <div class="exp-tags">
-                        <span>Power BI</span>
-                        <span>SQL</span>
-                        <span>Agile</span>
-                        <span>Excel</span>
+                    <div class="exp-chips">
+                        <span>Power BI</span><span>SQL</span><span>Agile</span><span>Excel</span>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
@@ -261,126 +255,127 @@
     <!-- Projects -->
     <section id="projects" class="section">
         <div class="container">
-            <span class="section-tag reveal">03 — Projects</span>
-            <h2 class="section-heading reveal">Selected <em>work</em></h2>
+            <div class="section-label reveal"><span>03</span> Projects</div>
+            <h2 class="section-h2 reveal">Selected <span class="text-glow">builds</span></h2>
 
             <div class="proj-grid">
-                <a href="https://github.com/Likithreddy18/Perishable-Inventory-Routing-Problem" target="_blank" class="proj-card reveal">
-                    <div class="proj-num">01</div>
-                    <h3 class="proj-title">Benchmarking Demand-Forecasting with AI</h3>
-                    <p class="proj-desc">
-                        Engineered a meta-learning engine over 44 heterogeneous datasets, reducing model-selection 
-                        cost 63%. Ranked 13 forecasting models balancing nCRPS accuracy and inference latency.
-                    </p>
-                    <div class="proj-tags">
-                        <span>Deep Learning</span>
-                        <span>Time Series</span>
-                        <span>Meta-Learning</span>
+                <a href="https://github.com/Likithreddy18" target="_blank" class="proj-card reveal">
+                    <div class="proj-card-inner">
+                        <div class="proj-icon"><i class="fas fa-chart-area"></i></div>
+                        <h3>Benchmarking Demand-Forecasting with AI</h3>
+                        <p>Meta-learning engine over 44 datasets — reduced model-selection cost 63%. Ranked 13 forecasting models balancing accuracy and latency.</p>
+                        <div class="proj-chips">
+                            <span>Deep Learning</span><span>Time Series</span><span>Meta-Learning</span>
+                        </div>
+                        <div class="proj-link">View project <i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
                 </a>
-
                 <a href="https://github.com/Likithreddy18/GANs" target="_blank" class="proj-card reveal">
-                    <div class="proj-num">02</div>
-                    <h3 class="proj-title">Process-Structure Linkages via GANs</h3>
-                    <p class="proj-desc">
-                        Synthesized 21 microstructure classes from a 600-image dataset with a fine-tuned GAN. 
-                        Only undergrad paper presented at SICE-2022 conference.
-                    </p>
-                    <div class="proj-tags">
-                        <span>PyTorch</span>
-                        <span>GANs</span>
-                        <span>Research</span>
+                    <div class="proj-card-inner">
+                        <div class="proj-icon"><i class="fas fa-microscope"></i></div>
+                        <h3>Process-Structure Linkages via GANs</h3>
+                        <p>Synthesized 21 microstructure classes from 600 images with fine-tuned GAN. Only undergrad paper at SICE-2022.</p>
+                        <div class="proj-chips">
+                            <span>PyTorch</span><span>GANs</span><span>Research</span>
+                        </div>
+                        <div class="proj-link">View project <i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
                 </a>
-
                 <a href="https://github.com/Likithreddy18/Perishable-Inventory-Routing-Problem" target="_blank" class="proj-card reveal">
-                    <div class="proj-num">03</div>
-                    <h3 class="proj-title">Multi-Objective Production &amp; Distribution Planning</h3>
-                    <p class="proj-desc">
-                        Designed multi-product logistics models for perishable goods, improving profit 30% 
-                        through waste reduction using NSGA-II optimization.
-                    </p>
-                    <div class="proj-tags">
-                        <span>Optimization</span>
-                        <span>NSGA-II</span>
-                        <span>Logistics</span>
+                    <div class="proj-card-inner">
+                        <div class="proj-icon"><i class="fas fa-truck-fast"></i></div>
+                        <h3>Multi-Objective Production & Distribution</h3>
+                        <p>Multi-product logistics models for perishable goods — improved profit 30% through waste reduction using NSGA-II.</p>
+                        <div class="proj-chips">
+                            <span>Optimization</span><span>NSGA-II</span><span>Logistics</span>
+                        </div>
+                        <div class="proj-link">View project <i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
                 </a>
-
                 <a href="https://github.com/Likithreddy18/Data-Cleaning" target="_blank" class="proj-card reveal">
-                    <div class="proj-num">04</div>
-                    <h3 class="proj-title">Comprehensive Data Cleaning Guide</h3>
-                    <p class="proj-desc">
-                        A complete roadmap for beginners covering data cleaning and analysis 
-                        techniques to ensure data readiness for modeling.
-                    </p>
-                    <div class="proj-tags">
-                        <span>Python</span>
-                        <span>Pandas</span>
-                        <span>Tutorial</span>
+                    <div class="proj-card-inner">
+                        <div class="proj-icon"><i class="fas fa-broom"></i></div>
+                        <h3>Comprehensive Data Cleaning Guide</h3>
+                        <p>Complete roadmap covering data cleaning and analysis techniques for model-ready datasets. Built for beginners.</p>
+                        <div class="proj-chips">
+                            <span>Python</span><span>Pandas</span><span>Tutorial</span>
+                        </div>
+                        <div class="proj-link">View project <i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <div class="proj-arrow"><i class="fas fa-arrow-right"></i></div>
                 </a>
             </div>
 
-            <div class="proj-more reveal">
-                <a href="https://github.com/Likithreddy18?tab=repositories" target="_blank" class="btn-outline">
-                    All Repositories <i class="fas fa-arrow-right"></i>
+            <div class="proj-footer reveal">
+                <a href="https://github.com/Likithreddy18?tab=repositories" target="_blank" class="btn-glow">
+                    <span>All repositories</span> <i class="fas fa-external-link-alt"></i>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="section section-dark">
+    <section id="skills" class="section">
         <div class="container">
-            <span class="section-tag reveal">04 — Skills</span>
-            <h2 class="section-heading reveal">Technical <em>toolkit</em></h2>
+            <div class="section-label reveal"><span>04</span> Skills</div>
+            <h2 class="section-h2 reveal">Technical <span class="text-glow">stack</span></h2>
 
-            <div class="skills-grid">
-                <div class="skill-group reveal">
-                    <h3 class="skill-group-title">Statistical Inference</h3>
-                    <div class="skill-items">
-                        <span>R</span><span>Python</span><span>Pandas</span>
-                        <span>Scikit-learn</span><span>PyTorch</span><span>Statsmodels</span>
-                        <span>Control Limits</span><span>A/B Tests</span>
+            <div class="skills-mosaic">
+                <div class="skill-block reveal">
+                    <div class="skill-block-head">
+                        <i class="fas fa-square-root-variable"></i>
+                        <h3>Statistical Inference</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>R</span><span>Python</span><span>Pandas</span><span>Scikit-learn</span>
+                        <span>PyTorch</span><span>Statsmodels</span><span>Control Limits</span><span>A/B Tests</span>
                     </div>
                 </div>
-                <div class="skill-group reveal">
-                    <h3 class="skill-group-title">ML & Optimization</h3>
-                    <div class="skill-items">
+                <div class="skill-block reveal">
+                    <div class="skill-block-head">
+                        <i class="fas fa-microchip"></i>
+                        <h3>ML & Optimization</h3>
+                    </div>
+                    <div class="skill-tags">
                         <span>XGBoost</span><span>LightGBM</span><span>PyTorch</span>
-                        <span>Mixed-Integer Optimization</span><span>SARIMAX</span><span>NLP</span>
+                        <span>Mixed-Integer Opt</span><span>SARIMAX</span><span>NLP</span>
                     </div>
                 </div>
-                <div class="skill-group reveal">
-                    <h3 class="skill-group-title">SQL & Big Data</h3>
-                    <div class="skill-items">
+                <div class="skill-block reveal">
+                    <div class="skill-block-head">
+                        <i class="fas fa-database"></i>
+                        <h3>SQL & Big Data</h3>
+                    </div>
+                    <div class="skill-tags">
                         <span>PostgreSQL</span><span>AWS Redshift</span>
                         <span>BigQuery</span><span>Snowflake</span>
                     </div>
                 </div>
-                <div class="skill-group reveal">
-                    <h3 class="skill-group-title">AWS & MLOps</h3>
-                    <div class="skill-items">
+                <div class="skill-block reveal">
+                    <div class="skill-block-head">
+                        <i class="fas fa-cloud"></i>
+                        <h3>AWS & MLOps</h3>
+                    </div>
+                    <div class="skill-tags">
                         <span>SageMaker</span><span>Lambda</span><span>Step Functions</span>
                         <span>Docker</span><span>MLflow</span><span>GitHub Actions</span>
                     </div>
                 </div>
-                <div class="skill-group reveal">
-                    <h3 class="skill-group-title">Gen AI / LLM</h3>
-                    <div class="skill-items">
+                <div class="skill-block reveal">
+                    <div class="skill-block-head">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                        <h3>Gen AI / LLM</h3>
+                    </div>
+                    <div class="skill-tags">
                         <span>SFT & RLHF</span><span>vLLM</span><span>RAG</span>
-                        <span>LangChain</span><span>HuggingFace</span>
-                        <span>OpenAI SDK</span><span>Anthropic SDK</span>
+                        <span>LangChain</span><span>HuggingFace</span><span>OpenAI SDK</span><span>Anthropic SDK</span>
                     </div>
                 </div>
-                <div class="skill-group reveal">
-                    <h3 class="skill-group-title">Visualization & BI</h3>
-                    <div class="skill-items">
+                <div class="skill-block reveal">
+                    <div class="skill-block-head">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Visualization & BI</h3>
+                    </div>
+                    <div class="skill-tags">
                         <span>Tableau</span><span>Power BI</span>
                         <span>Grafana</span><span>Predictive Modeling</span>
                     </div>
@@ -391,38 +386,42 @@
 
     <!-- Contact -->
     <section id="contact" class="section">
-        <div class="container">
-            <span class="section-tag reveal">05 — Contact</span>
-            <h2 class="section-heading contact-heading reveal">Let's <em>connect</em></h2>
-            <p class="contact-sub reveal">
-                Open to opportunities in Data Science, AI/ML, and quantitative research roles.
-            </p>
-            <div class="contact-links reveal">
-                <a href="mailto:chlikith@utexas.edu" class="contact-item-link">
+        <div class="container contact-container">
+            <div class="section-label reveal"><span>05</span> Contact</div>
+            <h2 class="section-h2 contact-h2 reveal">Let's build something <span class="text-glow">together</span></h2>
+            <p class="contact-p reveal">Open to roles in Data Science, AI/ML, and quantitative research.</p>
+            <div class="contact-grid reveal">
+                <a href="mailto:chlikith@utexas.edu" class="contact-card">
                     <i class="fas fa-envelope"></i>
-                    <span>chlikith@utexas.edu</span>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-val">chlikith@utexas.edu</span>
                 </a>
-                <a href="tel:+17373282796" class="contact-item-link">
+                <a href="tel:+17373282796" class="contact-card">
                     <i class="fas fa-phone"></i>
-                    <span>+1 737 328 2796</span>
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-val">+1 737 328 2796</span>
                 </a>
-                <a href="https://www.linkedin.com/in/likith-reddy-chintala/" target="_blank" class="contact-item-link">
+                <a href="https://www.linkedin.com/in/likith-reddy-chintala/" target="_blank" class="contact-card">
                     <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-val">likith-reddy-chintala</span>
                 </a>
-                <a href="https://github.com/Likithreddy18" target="_blank" class="contact-item-link">
+                <a href="https://github.com/Likithreddy18" target="_blank" class="contact-card">
                     <i class="fab fa-github"></i>
-                    <span>GitHub</span>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-val">Likithreddy18</span>
                 </a>
             </div>
-            <div class="contact-location reveal">Austin, TX — Available for relocation</div>
+            <div class="contact-loc reveal">
+                <i class="fas fa-location-dot"></i> Austin, TX · Available for relocation
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container footer-inner">
             <span>&copy; 2026 Likith Reddy Chintala</span>
-            <a href="#hero" class="back-top">Back to top <i class="fas fa-arrow-up"></i></a>
+            <a href="#hero">Back to top <i class="fas fa-arrow-up"></i></a>
         </div>
     </footer>
 
