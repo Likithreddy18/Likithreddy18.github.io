@@ -68,11 +68,15 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
-      <div className="hero-meta">
-        <span className="status-dot" />
-        <span>AVAILABLE · AUSTIN TX</span>
-        <span>·</span>
-        <span>PORTFOLIO / 2026</span>
+      <div className="hero-masthead">
+        <div className="masthead-left">
+          <div className="masthead-row">ISSUE N° 01</div>
+          <div className="masthead-row">APR 2026</div>
+        </div>
+        <div className="masthead-right">
+          <div className="masthead-row"><span className="status-dot" /> IN AUSTIN, AVAILABLE</div>
+          <div className="masthead-row">LIKITH REDDY CHINTALA</div>
+        </div>
       </div>
 
       <h1 className="display" ref={headRef}>
