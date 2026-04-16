@@ -1,15 +1,12 @@
 /**
- * Portfolio — Immersive Interactions
+ * Portfolio — Cinematic Interactions
  *
  * Features:
- *   - Custom cursor with hover states
- *   - Navbar scroll
- *   - Mobile menu
- *   - Smooth anchor scroll
- *   - Scroll reveal (IntersectionObserver)
- *   - Animated number counters
- *   - Drag-to-scroll on project gallery
- *   - Mouse-follow glow on work cards
+ *   - Pinned work section with scroll-driven card transitions
+ *   - Horizontal project scroll linked to vertical scroll position
+ *   - Animated impact bars and counters
+ *   - Word-by-word heading reveals
+ *   - Custom cursor
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     init_smooth_scroll();
     init_reveal();
     init_counters();
-    init_drag_scroll();
-    init_card_glow();
+    init_impact_bars();
+    init_work_pinned();
+    init_projects_pinned();
 });
 
 /* ── Custom Cursor ── */
@@ -28,10 +26,7 @@ function init_cursor() {
     const cursor = document.getElementById("cursor");
     if (!cursor || window.innerWidth < 900) return;
 
-    let cx = 0;
-    let cy = 0;
-    let tx = 0;
-    let ty = 0;
+    let cx = 0, cy = 0, tx = 0, ty = 0;
 
     document.addEventListener("mousemove", (e) => {
         tx = e.clientX;
@@ -46,9 +41,8 @@ function init_cursor() {
         requestAnimationFrame(loop);
     })();
 
-    /* Hover targets: links, buttons, and [data-cursor] */
     const hovers = document.querySelectorAll(
-        "a, button, .work-card, .proj-slide"
+        "a, button, .pslide, .wps, .istat, .ab-card"
     );
     hovers.forEach((el) => {
         el.addEventListener("mouseenter", () => {
@@ -63,18 +57,13 @@ function init_cursor() {
     });
 }
 
-/* ── Nav scroll ── */
+/* ── Nav ── */
 function init_nav() {
     const nav = document.getElementById("nav");
     if (!nav) return;
-
-    window.addEventListener(
-        "scroll",
-        () => {
-            nav.classList.toggle("scrolled", window.scrollY > 50);
-        },
-        { passive: true }
-    );
+    window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 50);
+    }, { passive: true });
 }
 
 /* ── Burger ── */
@@ -112,11 +101,8 @@ function init_smooth_scroll() {
     });
 }
 
-/* ── Scroll Reveal ── */
+/* ── Scroll Reveal (single elements + .word groups) ── */
 function init_reveal() {
-    const els = document.querySelectorAll(".rv");
-    if (!els.length) return;
-
     const obs = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
@@ -126,9 +112,9 @@ function init_reveal() {
                 }
             });
         },
-        { threshold: 0.08, rootMargin: "0px 0px -20px 0px" }
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
-    els.forEach((el) => obs.observe(el));
+    document.querySelectorAll(".rv, .word").forEach((el) => obs.observe(el));
 }
 
 /* ── Animated counters ── */
@@ -142,7 +128,7 @@ function init_counters() {
                 if (!entry.isIntersecting) return;
                 const el = entry.target;
                 const end = parseInt(el.dataset.count, 10);
-                const duration = 1400;
+                const duration = 1600;
                 const start_time = performance.now();
 
                 function step(now) {
@@ -163,45 +149,110 @@ function init_counters() {
     nums.forEach((el) => obs.observe(el));
 }
 
-/* ── Drag-to-scroll on horizontal project gallery ── */
-function init_drag_scroll() {
-    const wrap = document.querySelector(".hscroll-wrap");
-    if (!wrap) return;
+/* ── Impact bar fills ── */
+function init_impact_bars() {
+    const bars = document.querySelectorAll(".istat-fill");
+    if (!bars.length) return;
 
-    let is_down = false;
-    let start_x = 0;
-    let scroll_left = 0;
-
-    wrap.addEventListener("mousedown", (e) => {
-        is_down = true;
-        start_x = e.pageX - wrap.offsetLeft;
-        scroll_left = wrap.scrollLeft;
-    });
-    wrap.addEventListener("mouseleave", () => {
-        is_down = false;
-    });
-    wrap.addEventListener("mouseup", () => {
-        is_down = false;
-    });
-    wrap.addEventListener("mousemove", (e) => {
-        if (!is_down) return;
-        e.preventDefault();
-        const x = e.pageX - wrap.offsetLeft;
-        const walk = (x - start_x) * 1.5;
-        wrap.scrollLeft = scroll_left - walk;
-    });
+    const obs = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const fill = el.dataset.fill;
+                setTimeout(() => {
+                    el.style.width = fill + "%";
+                }, 200);
+                obs.unobserve(el);
+            });
+        },
+        { threshold: 0.3 }
+    );
+    bars.forEach((el) => obs.observe(el));
 }
 
-/* ── Mouse-follow glow on work cards ── */
-function init_card_glow() {
-    const cards = document.querySelectorAll(".work-card");
-    cards.forEach((card) => {
-        card.addEventListener("mousemove", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty("--mx", x + "px");
-            card.style.setProperty("--my", y + "px");
+/* ══════════════════════════════════════════
+   WORK — Pinned scroll storytelling
+   Cards swap in/out as user scrolls through
+   the 600vh-tall container
+   ══════════════════════════════════════════ */
+function init_work_pinned() {
+    const section = document.querySelector(".work-pinned");
+    const cards = document.querySelectorAll(".wps");
+    const counter = document.getElementById("workCurrent");
+    if (!section || !cards.length || window.innerWidth < 900) {
+        cards.forEach((c) => c.classList.add("active"));
+        return;
+    }
+
+    const total = cards.length;
+
+    function update() {
+        const rect = section.getBoundingClientRect();
+        const section_height = rect.height;
+        const viewport = window.innerHeight;
+
+        /* Progress: 0 when top of section hits viewport top,
+           1 when bottom of section hits viewport bottom */
+        const scrolled = -rect.top;
+        const max_scroll = section_height - viewport;
+        let progress = scrolled / max_scroll;
+        progress = Math.max(0, Math.min(1, progress));
+
+        /* Active card index based on progress */
+        const active = Math.min(
+            Math.floor(progress * total),
+            total - 1
+        );
+
+        cards.forEach((card, i) => {
+            card.classList.remove("active", "gone");
+            if (i < active) {
+                card.classList.add("gone");
+            } else if (i === active) {
+                card.classList.add("active");
+            }
         });
-    });
+
+        if (counter) {
+            counter.textContent = String(active + 1).padStart(2, "0");
+        }
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+}
+
+/* ══════════════════════════════════════════
+   PROJECTS — Pinned horizontal scroll
+   Vertical scroll translates horizontally
+   ══════════════════════════════════════════ */
+function init_projects_pinned() {
+    const section = document.querySelector(".projects-pinned");
+    const track = document.getElementById("ppTrack");
+    if (!section || !track || window.innerWidth < 900) return;
+
+    function update() {
+        const rect = section.getBoundingClientRect();
+        const section_height = rect.height;
+        const viewport = window.innerHeight;
+
+        const scrolled = -rect.top;
+        const max_scroll = section_height - viewport;
+        let progress = scrolled / max_scroll;
+        progress = Math.max(0, Math.min(1, progress));
+
+        const track_width = track.scrollWidth;
+        const visible_width = track.parentElement
+            ? track.parentElement.offsetWidth
+            : window.innerWidth;
+        const max_translate = Math.max(0, track_width - visible_width);
+
+        const translate = progress * max_translate;
+        track.style.transform = `translateX(-${translate}px)`;
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
 }
