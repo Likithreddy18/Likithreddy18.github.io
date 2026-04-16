@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likith Reddy Chintala</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=General+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="importmap">
+    { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+</head>
+<body>
+
+<canvas id="c"></canvas>
+<div class="cursor" id="cursor"><span>View</span></div>
+<div class="progress" id="progress"></div>
+
+<div class="page">
+    <!-- Nav -->
+    <nav id="nav">
+        <a href="#hero" class="nav-logo">Likith<span>Reddy</span></a>
+        <div class="nav-links" id="navLinks">
+            <a href="#work">Work</a>
+            <a href="#impact">Impact</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact" class="nav-pill">Say Hello</a>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="hero" class="hero">
+        <div class="hero-center">
+            <div class="hero-photo rv"><img src="images/profile_pic.JPG" alt="Likith"></div>
+            <p class="hero-tag rv">Data Scientist · AI Researcher · Austin TX</p>
+            <h1 class="hero-h1">
+                <span class="line rv">I build models</span>
+                <span class="line rv">that <em>move markets</em></span>
+            </h1>
+            <div class="hero-nums rv">
+                <div class="hnum"><span class="hnum-v" data-count="30">0</span><span class="hnum-s">%</span><p>above benchmark</p></div>
+                <div class="hnum"><span class="hnum-v" data-count="4">0</span><span class="hnum-s">+</span><p>years experience</p></div>
+                <div class="hnum"><span class="hnum-v" data-count="5">0</span><span class="hnum-s"></span><p>roles shipped</p></div>
+            </div>
+            <div class="hero-btns rv">
+                <a href="#work" class="btn-fill">Explore my work <i class="fas fa-arrow-down"></i></a>
+                <a href="https://www.linkedin.com/in/likith-reddy-chintala/" target="_blank" class="btn-ring"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Likithreddy18" target="_blank" class="btn-ring"><i class="fab fa-github"></i></a>
+                <a href="mailto:chlikith@utexas.edu" class="btn-ring"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="scroll-hint rv">
+            <div class="scroll-bar"><div class="scroll-thumb"></div></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ═══ MARQUEE ═══ -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>Python</span><span>·</span><span>PyTorch</span><span>·</span><span>LangChain</span><span>·</span>
+            <span>RAG</span><span>·</span><span>XGBoost</span><span>·</span><span>SageMaker</span><span>·</span>
+            <span>Docker</span><span>·</span><span>PostgreSQL</span><span>·</span><span>Snowflake</span><span>·</span>
+            <span>Tableau</span><span>·</span><span>MLflow</span><span>·</span><span>RLHF</span><span>·</span>
+            <span>vLLM</span><span>·</span><span>HuggingFace</span><span>·</span><span>CI/CD</span><span>·</span>
+            <span>A/B Testing</span><span>·</span><span>Kafka</span><span>·</span><span>FastAPI</span><span>·</span>
+            <span>Python</span><span>·</span><span>PyTorch</span><span>·</span><span>LangChain</span><span>·</span>
+            <span>RAG</span><span>·</span><span>XGBoost</span><span>·</span><span>SageMaker</span><span>·</span>
+            <span>Docker</span><span>·</span><span>PostgreSQL</span><span>·</span><span>Snowflake</span><span>·</span>
+            <span>Tableau</span><span>·</span><span>MLflow</span><span>·</span><span>RLHF</span><span>·</span>
+            <span>vLLM</span><span>·</span><span>HuggingFace</span><span>·</span><span>CI/CD</span><span>·</span>
+            <span>A/B Testing</span><span>·</span><span>Kafka</span><span>·</span><span>FastAPI</span><span>·</span>
+        </div>
+    </div>
+
+    <!-- ═══ WORK — Pinned Scroll Story ═══ -->
+    <section id="work" class="work-pinned">
+        <div class="work-sticky">
+            <div class="work-inner">
+                <div class="work-left">
+                    <p class="work-label">Experience</p>
+                    <h2 class="work-big-heading">
+                        <span class="wbh-line">Where</span>
+                        <span class="wbh-line">I've <em>shipped</em></span>
+                        <span class="wbh-line">real <em>impact.</em></span>
+                    </h2>
+                    <div class="work-count"><span id="workCurrent">01</span> <span class="sl">/</span> <span>05</span></div>
+                </div>
+                <div class="work-right">
+                    <!-- Cards stacked & revealed as you scroll -->
+                    <article class="wps" data-index="0">
+                        <div class="wps-top">
+                            <span class="wps-badge live">Now</span>
+                            <span class="wps-date">2025 — Present</span>
+                        </div>
+                        <h3 class="wps-role">AI Researcher</h3>
+                        <p class="wps-org">Nirvana Systems · Austin</p>
+                        <p class="wps-desc">Systematic equity models beating prior benchmarks by <em>~30%</em>. Python automation for data processing, scoring, and live trade signal generation.</p>
+                        <div class="wps-stack"><span>Python</span><span>Systematic Trading</span><span>Time-Series</span></div>
+                    </article>
+                    <article class="wps" data-index="1">
+                        <div class="wps-top">
+                            <span class="wps-date">2024 — 2025</span>
+                        </div>
+                        <h3 class="wps-role">Founding Data Engineer</h3>
+                        <p class="wps-org">Jiva-ai · Startup Capstone</p>
+                        <p class="wps-desc">Shipped 5-agent LangGraph platform cutting grocery waste <em>28%</em>. SageMaker retraining: <em>8 hrs → 45 min</em>.</p>
+                        <div class="wps-stack"><span>LangGraph</span><span>RAG</span><span>Docker</span><span>SageMaker</span></div>
+                    </article>
+                    <article class="wps" data-index="2">
+                        <div class="wps-top">
+                            <span class="wps-date">May — Aug 2024</span>
+                        </div>
+                        <h3 class="wps-role">Data Scientist</h3>
+                        <p class="wps-org">Construction Industry Institute</p>
+                        <p class="wps-desc">Migrated Excel/VBA → Redshift star-schema. GLM + XGBoost ensemble on <em>1.2M records</em> for OPEX prediction.</p>
+                        <div class="wps-stack"><span>Redshift</span><span>Kafka</span><span>XGBoost</span></div>
+                    </article>
+                    <article class="wps" data-index="3">
+                        <div class="wps-top">
+                            <span class="wps-date">Jan — Apr 2024</span>
+                        </div>
+                        <h3 class="wps-role">Associate Consultant</h3>
+                        <p class="wps-org">Texas Venture Labs</p>
+                        <p class="wps-desc">Dynamic pricing dashboard projecting <em>15% revenue uplift</em>. Led A/B testing across 3 verticals.</p>
+                        <div class="wps-stack"><span>Tableau</span><span>A/B Testing</span><span>R</span></div>
+                    </article>
+                    <article class="wps" data-index="4">
+                        <div class="wps-top">
+                            <span class="wps-date">2021 — 2023</span>
+                        </div>
+                        <h3 class="wps-role">Senior Data Analyst</h3>
+                        <p class="wps-org">Kantar · Bengaluru</p>
+                        <p class="wps-desc">Power BI "Insights Hub" adopted by <em>20+ brand teams</em>, influencing <em>$2M spend</em> across 28 countries.</p>
+                        <div class="wps-stack"><span>Power BI</span><span>SQL</span><span>Agile</span></div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ IMPACT — The WOW moment ═══ -->
+    <section id="impact" class="impact">
+        <div class="impact-bg"></div>
+        <div class="container">
+            <p class="impact-label rv">Impact, by the numbers</p>
+            <h2 class="impact-heading">
+                <span class="word rv">Real</span>
+                <span class="word rv"><em>outcomes.</em></span>
+                <span class="word rv">Measured</span>
+                <span class="word rv">in <em>millions.</em></span>
+            </h2>
+
+            <div class="impact-grid">
+                <div class="istat rv">
+                    <div class="istat-bar"><div class="istat-fill" data-fill="95"></div></div>
+                    <div class="istat-num"><span data-count="30">0</span>%</div>
+                    <p>Backtested performance above prior benchmarks — systematic equity models now driving live trades at Nirvana Systems.</p>
+                </div>
+                <div class="istat rv">
+                    <div class="istat-bar"><div class="istat-fill" data-fill="88"></div></div>
+                    <div class="istat-num"><span data-count="28">0</span>%</div>
+                    <p>Grocery waste eliminated by 5-agent LangGraph platform at Jiva-ai, alongside 32% delivery-mile reduction.</p>
+                </div>
+                <div class="istat rv">
+                    <div class="istat-bar"><div class="istat-fill" data-fill="78"></div></div>
+                    <div class="istat-num">$<span data-count="2">0</span>M</div>
+                    <p>Incremental spend influenced through Power BI "Insights Hub" used by 20+ brand teams across 28 countries.</p>
+                </div>
+                <div class="istat rv">
+                    <div class="istat-bar"><div class="istat-fill" data-fill="72"></div></div>
+                    <div class="istat-num"><span data-count="63">0</span>%</div>
+                    <p>Model-selection cost reduced via meta-learning engine over 44 heterogeneous forecasting datasets.</p>
+                </div>
+                <div class="istat rv">
+                    <div class="istat-bar"><div class="istat-fill" data-fill="55"></div></div>
+                    <div class="istat-num"><span data-count="40">0</span>%</div>
+                    <p>Analyst prep time cut through real-time ELT pipelines (Glue + EMR + Kafka) at Construction Industry Institute.</p>
+                </div>
+                <div class="istat rv">
+                    <div class="istat-bar"><div class="istat-fill" data-fill="60"></div></div>
+                    <div class="istat-num"><span data-count="45">0</span><span class="istat-u">min</span></div>
+                    <p>Forecast prep time — down from 8 hours — via SageMaker automation with Lambda + MLflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROJECTS — Cinematic Horizontal ═══ -->
+    <section id="projects" class="projects-pinned">
+        <div class="pp-sticky">
+            <div class="pp-header">
+                <p class="pp-label">Featured Projects</p>
+                <h2 class="pp-heading"><em>Things</em> I built <em>because</em> I was curious</h2>
+                <p class="pp-hint">← Scroll to explore →</p>
+            </div>
+            <div class="pp-track" id="ppTrack">
+                <a href="https://github.com/Likithreddy18" target="_blank" class="pslide" data-cursor="GitHub">
+                    <div class="pslide-num">01</div>
+                    <div class="pslide-content">
+                        <div class="pslide-ic"><i class="fas fa-chart-area"></i></div>
+                        <h3>Demand Forecasting<br>Benchmark Engine</h3>
+                        <p>Meta-learning across 44 datasets. Cut model-selection cost 63%. Ranked 13 forecasters on nCRPS accuracy and latency.</p>
+                        <div class="pslide-tags"><span>Deep Learning</span><span>Time Series</span><span>Meta-Learning</span></div>
+                        <div class="pslide-cta">View project <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+                <a href="https://github.com/Likithreddy18/GANs" target="_blank" class="pslide" data-cursor="GitHub">
+                    <div class="pslide-num">02</div>
+                    <div class="pslide-content">
+                        <div class="pslide-ic"><i class="fas fa-microscope"></i></div>
+                        <h3>Microstructure<br>Synthesis via GANs</h3>
+                        <p>Fine-tuned GAN generating 21 microstructure classes from 600 images. Only undergrad paper presented at SICE-2022.</p>
+                        <div class="pslide-tags"><span>PyTorch</span><span>GANs</span><span>Research</span></div>
+                        <div class="pslide-cta">View project <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+                <a href="https://github.com/Likithreddy18/Perishable-Inventory-Routing-Problem" target="_blank" class="pslide" data-cursor="GitHub">
+                    <div class="pslide-num">03</div>
+                    <div class="pslide-content">
+                        <div class="pslide-ic"><i class="fas fa-truck-fast"></i></div>
+                        <h3>Perishable Inventory<br>Routing Optimizer</h3>
+                        <p>Multi-product logistics for perishable goods. 30% profit lift using NSGA-II multi-objective optimization.</p>
+                        <div class="pslide-tags"><span>NSGA-II</span><span>Optimization</span><span>Logistics</span></div>
+                        <div class="pslide-cta">View project <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+                <a href="https://github.com/Likithreddy18/Data-Cleaning" target="_blank" class="pslide" data-cursor="GitHub">
+                    <div class="pslide-num">04</div>
+                    <div class="pslide-content">
+                        <div class="pslide-ic"><i class="fas fa-broom"></i></div>
+                        <h3>Data Cleaning<br>Complete Guide</h3>
+                        <p>End-to-end roadmap covering data cleaning, EDA, and model-readiness. Built for beginners entering data science.</p>
+                        <div class="pslide-tags"><span>Python</span><span>Pandas</span><span>Tutorial</span></div>
+                        <div class="pslide-cta">View project <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+                <div class="pslide pslide-end">
+                    <h3>Want more?</h3>
+                    <p>Full repository of projects and experiments on GitHub.</p>
+                    <a href="https://github.com/Likithreddy18?tab=repositories" target="_blank" class="btn-fill light">
+                        All Repos <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about" class="about-new">
+        <div class="container">
+            <p class="ab-label rv">About Me</p>
+            <div class="about-split">
+                <div class="ab-main">
+                    <h2 class="ab-heading">
+                        <span class="word rv">Quantitative</span>
+                        <span class="word rv">research</span>
+                        <span class="word rv">meets</span>
+                        <span class="word rv"><em>production</em></span>
+                        <span class="word rv"><em>ML.</em></span>
+                    </h2>
+                    <p class="ab-text rv">
+                        I build systematic equity models with leak-free backtests, ship multi-agent LLM platforms,
+                        and migrate legacy data systems to cloud-native architectures.
+                    </p>
+                    <p class="ab-text rv">
+                        When I'm not training models, I'm partnering with leadership to ensure only validated
+                        signals ever reach production.
+                    </p>
+                </div>
+                <div class="ab-side">
+                    <div class="ab-card rv">
+                        <span class="ab-yr">2023—25</span>
+                        <strong>M.S. Operations Research</strong>
+                        <p>UT Austin · Data Analytics Track</p>
+                    </div>
+                    <div class="ab-card rv">
+                        <span class="ab-yr">2017—21</span>
+                        <strong>B.Tech Mechanical Eng.</strong>
+                        <p>NIT Calicut</p>
+                    </div>
+                    <div class="ab-card ab-card-accent rv">
+                        <span class="ab-yr">2022</span>
+                        <strong>SICE Publication</strong>
+                        <p>Only undergrad paper presented · GANs research</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT — Giant type ═══ -->
+    <section id="contact" class="contact-big">
+        <div class="cb-bg"></div>
+        <div class="container cb-container">
+            <p class="cb-tag rv">Available for opportunities</p>
+            <h2 class="cb-title">
+                <span class="line">
+                    <span class="word rv">Let's</span>
+                </span>
+                <span class="line">
+                    <span class="word rv"><em>build</em></span>
+                    <span class="word rv">something</span>
+                </span>
+                <span class="line">
+                    <span class="word rv"><em>together.</em></span>
+                </span>
+            </h2>
+            <div class="cb-links rv">
+                <a href="mailto:chlikith@utexas.edu" class="cb-link"><i class="fas fa-envelope"></i> chlikith@utexas.edu</a>
+                <a href="tel:+17373282796" class="cb-link"><i class="fas fa-phone"></i> +1 737 328 2796</a>
+                <a href="https://www.linkedin.com/in/likith-reddy-chintala/" target="_blank" class="cb-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Likithreddy18" target="_blank" class="cb-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <p class="cb-loc rv"><i class="fas fa-location-dot"></i> Austin, TX · Open to relocation</p>
+        </div>
+    </section>
+
+    <footer><span>&copy; 2026 Likith Reddy Chintala</span><a href="#hero">Top <i class="fas fa-arrow-up"></i></a></footer>
+</div>
+
+<!-- Three.js Particle Hero -->
+<script type="module">
+import * as THREE from 'three';
+const canvas=document.getElementById('c');
+const R=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+R.setSize(innerWidth,innerHeight);R.setPixelRatio(Math.min(devicePixelRatio,2));
+const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,.1,1000);
+C.position.z=50;
+const N=6000,pos=new Float32Array(N*3),col=new Float32Array(N*3),sz=new Float32Array(N);
+for(let i=0;i<N;i++){
+    pos[i*3]=(Math.random()-.5)*120;pos[i*3+1]=(Math.random()-.5)*120;pos[i*3+2]=(Math.random()-.5)*80;
+    const p=Math.random();
+    if(p<.4){col[i*3]=.31+Math.random()*.1;col[i*3+1]=.67+Math.random()*.1;col[i*3+2]=.99;}
+    else if(p<.7){col[i*3]=0;col[i*3+1]=.85+Math.random()*.15;col[i*3+2]=.95+Math.random()*.05;}
+    else{col[i*3]=.65+Math.random()*.1;col[i*3+1]=.55+Math.random()*.1;col[i*3+2]=.99;}
+    sz[i]=Math.random()*2.5+.5;
+}
+const G=new THREE.BufferGeometry();
+G.setAttribute('position',new THREE.BufferAttribute(pos,3));
+G.setAttribute('color',new THREE.BufferAttribute(col,3));
+G.setAttribute('size',new THREE.BufferAttribute(sz,1));
+const M=new THREE.ShaderMaterial({
+    uniforms:{uTime:{value:0},uMouse:{value:new THREE.Vector2()},uScroll:{value:0},uPR:{value:R.getPixelRatio()}},
+    vertexShader:`uniform float uTime;uniform vec2 uMouse;uniform float uScroll;uniform float uPR;
+    attribute float size;varying vec3 vC;varying float vA;
+    void main(){vC=color;vec3 p=position;float t=uTime*.3;
+    p.x+=sin(t+p.y*.05)*2.;p.y+=cos(t+p.x*.04)*1.5;p.z+=sin(t*.5+p.x*.03)*1.5;
+    float dx=p.x-uMouse.x*40.,dy=p.y-uMouse.y*40.,d=sqrt(dx*dx+dy*dy),r=max(0.,1.-d/20.);
+    p.x+=dx*r*.3;p.y+=dy*r*.3;p.z-=uScroll*30.;p.x*=1.+uScroll*.5;p.y*=1.+uScroll*.3;
+    vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;
+    gl_PointSize=size*uPR*(80./-mv.z);
+    vA=smoothstep(0.,.15,1.-uScroll)*(.4+.6*(1.-smoothstep(10.,60.,-mv.z)));}`,
+    fragmentShader:`varying vec3 vC;varying float vA;void main(){float d=length(gl_PointCoord-vec2(.5));
+    if(d>.5)discard;gl_FragColor=vec4(vC,vA*exp(-d*6.));}`,
+    transparent:true,vertexColors:true,depthWrite:false,blending:THREE.AdditiveBlending
+});
+const pts=new THREE.Points(G,M);S.add(pts);
+const mouse={x:0,y:0,tx:0,ty:0};let scroll=0;
+document.addEventListener('mousemove',e=>{mouse.tx=(e.clientX/innerWidth)*2-1;mouse.ty=-(e.clientY/innerHeight)*2+1;});
+addEventListener('scroll',()=>{
+    scroll=Math.min(scrollY/(innerHeight*1.5),1);
+    const p=document.getElementById('progress');
+    if(p){const max=document.documentElement.scrollHeight-innerHeight;p.style.width=(scrollY/max*100)+'%';}
+},{passive:true});
+const clock=new THREE.Clock();
+(function loop(){requestAnimationFrame(loop);const t=clock.getElapsedTime();
+mouse.x+=(mouse.tx-mouse.x)*.05;mouse.y+=(mouse.ty-mouse.y)*.05;
+M.uniforms.uTime.value=t;M.uniforms.uMouse.value.set(mouse.x,mouse.y);M.uniforms.uScroll.value=scroll;
+pts.rotation.y=t*.02;pts.rotation.x=Math.sin(t*.1)*.05;R.render(S,C);})();
+addEventListener('resize',()=>{C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix();
+R.setSize(innerWidth,innerHeight);M.uniforms.uPR.value=R.getPixelRatio();});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
