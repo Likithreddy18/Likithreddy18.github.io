@@ -3,13 +3,15 @@ import * as THREE from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
 import { particleVertex, particleFragment } from './shaders.js';
 
-// Warm palette — reads as "dawn sky" rather than "deep space"
+// Editorial palette — blue / ink / a single warm pop
+// Skews toward blue and ink, with a rare warm yellow particle for visual punctuation
 const PALETTE = [
-  new THREE.Color('#c4532a'),
-  new THREE.Color('#e8a87c'),
-  new THREE.Color('#d4a574'),
-  new THREE.Color('#8fa68e'),
-  new THREE.Color('#b8a89a'),
+  new THREE.Color('#0047ff'), // electric blue (rare, punchy)
+  new THREE.Color('#2a5bd7'), // muted blue
+  new THREE.Color('#0a0a0a'), // ink
+  new THREE.Color('#3a3a3a'), // soft charcoal
+  new THREE.Color('#8a8a85'), // warm grey
+  new THREE.Color('#e0c46c'), // warm yellow (rare — adds a printing-press feel)
 ];
 
 // Generate a soft circular sprite at runtime — no external assets
