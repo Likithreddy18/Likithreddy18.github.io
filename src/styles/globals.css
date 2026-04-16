@@ -1,16 +1,17 @@
 :root {
-  --bg: #f4f1ea;
-  --bg-warm: #ede9df;
-  --ink: #1a1a1a;
-  --ink-soft: #2a2a2a;
-  --muted: #6b6b68;
-  --muted-light: #9a9a96;
-  --line: rgba(26, 26, 26, 0.08);
-  --line-strong: rgba(26, 26, 26, 0.14);
-  --accent: #c4532a;
-  --accent-soft: #e8a87c;
-  --glass: rgba(244, 241, 234, 0.55);
-  --glass-strong: rgba(244, 241, 234, 0.78);
+  /* Cream + electric blue + black — editorial, a little punk */
+  --bg: #f5f0e6;
+  --bg-warm: #ebe4d2;
+  --ink: #0a0a0a;
+  --ink-soft: #1a1a1a;
+  --muted: #5c5c58;
+  --muted-light: #8a8a85;
+  --line: rgba(10, 10, 10, 0.1);
+  --line-strong: rgba(10, 10, 10, 0.2);
+  --accent: #0047ff;
+  --accent-soft: #5a7eff;
+  --glass: rgba(245, 240, 230, 0.55);
+  --glass-strong: rgba(245, 240, 230, 0.78);
   --serif: 'Fraunces', 'Times New Roman', serif;
   --italic: 'Instrument Serif', 'Times New Roman', serif;
   --sans: 'Geist', -apple-system, sans-serif;
@@ -51,9 +52,9 @@ a { color: inherit; text-decoration: none; }
   z-index: 1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(255, 179, 138, 0.18), transparent 60%),
-    radial-gradient(ellipse 70% 40% at 85% 30%, rgba(196, 83, 42, 0.08), transparent 60%),
-    radial-gradient(ellipse 90% 60% at 50% 100%, rgba(212, 228, 208, 0.12), transparent 60%);
+    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(0, 71, 255, 0.06), transparent 60%),
+    radial-gradient(ellipse 70% 40% at 85% 30%, rgba(224, 196, 108, 0.08), transparent 60%),
+    radial-gradient(ellipse 90% 60% at 50% 100%, rgba(10, 10, 10, 0.04), transparent 60%);
 }
 
 .noise {
@@ -136,7 +137,7 @@ nav.topnav .nav-avatar {
 
 nav.topnav .nav-name:hover .nav-avatar {
   transform: scale(1.08) rotate(-3deg);
-  box-shadow: 0 0 0 3px rgba(196, 83, 42, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 71, 255, 0.18);
 }
 
 /* ─── Layout ─── */
@@ -184,18 +185,50 @@ section { padding: 120px 0; position: relative; }
   letter-spacing: 0.02em;
 }
 
+/* Magazine-style masthead — sits above the headline with a full-width rule */
+.hero-masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+  margin-bottom: 56px;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.masthead-right { text-align: right; }
+
+.masthead-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.8;
+}
+
+.masthead-right .masthead-row { justify-content: flex-end; }
+
+.masthead-row:nth-child(2) {
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
 .status-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #4ade80;
-  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2);
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(0, 71, 255, 0.2);
   animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2); }
-  50% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0.05); }
+  0%, 100% { box-shadow: 0 0 0 4px rgba(0, 71, 255, 0.2); }
+  50% { box-shadow: 0 0 0 8px rgba(0, 71, 255, 0.05); }
 }
 
 h1.display {
@@ -385,7 +418,7 @@ h2.section-title .italic {
   background: var(--accent);
   transform: translateY(-50%) scale(0);
   transition: transform 0.3s ease;
-  box-shadow: 0 0 16px rgba(196, 83, 42, 0.5);
+  box-shadow: 0 0 16px rgba(0, 71, 255, 0.55);
 }
 
 .exp-item:hover { padding-left: 24px; }
@@ -479,7 +512,7 @@ h2.section-title .italic {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(196, 83, 42, 0.1), transparent 40%);
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(0, 71, 255, 0.12), transparent 40%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -699,6 +732,9 @@ footer a:hover { color: var(--ink); }
   nav.topnav .nav-avatar { width: 24px; height: 24px; }
   .hero-bottom { grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 64px; }
   .stat .num { font-size: 44px; }
+  .hero-masthead { flex-direction: column; gap: 8px; padding: 16px 0; }
+  .masthead-right { text-align: left; }
+  .masthead-right .masthead-row { justify-content: flex-start; }
   .section-head { flex-direction: column; align-items: flex-start; }
   .section-meta { text-align: left; }
   .exp-item { grid-template-columns: 1fr; gap: 16px; }
